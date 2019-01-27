@@ -87,10 +87,10 @@ Set system `root` password. It's **STRONGLY** recommended that you choose a cust
 ##### `USER_PASSWORD`="raspberry"
 Set password for the created non-root user `USER_NAME`=pi. Ignored if `ENABLE_USER`=false. It's **STRONGLY** recommended that you choose a custom password.
 
-##### `DEFLOCAL`="en_US.UTF-8"
+##### `DEFLOCAL`="fr_FR.UTF-8"
 Set default system locale. This setting can also be changed inside the running OS using the `dpkg-reconfigure locales` command. Please note that on using this parameter the script will automatically install the required packages `locales`, `keyboard-configuration` and `console-setup`.
 
-##### `TIMEZONE`="Europe/Berlin"
+##### `TIMEZONE`="Europe/Paris"
 Set default system timezone. All available timezones can be found in the `/usr/share/zoneinfo/` directory. This setting can also be changed inside the running OS using the `dpkg-reconfigure tzdata` command.
 
 ##### `EXPANDROOT`=true
@@ -352,7 +352,7 @@ Compile the kernel using ccache. This speeds up kernel recompilation by caching 
 Remove all kernel sources from the generated OS image after it was built and installed.
 
 ##### `KERNELSRC_DIR`=""
-Path to a directory (`linux`) of [RaspberryPi Linux kernel sources](https://github.com/raspberrypi/linux) that will be copied, configured, build and installed inside the chroot.
+Path to a directory (`linux`) of [RaspberryPi Linux kernel sources with unofficial grsec](https://github.com/HacKurx/linux-rpi_unofficial_grsec) that will be copied, configured, build and installed inside the chroot.
 
 ##### `KERNELSRC_CLEAN`=false
 Clean the existing kernel sources directory `KERNELSRC_DIR` (using `make mrproper`) after it was copied to the chroot and before the compilation of the kernel has started. This parameter will be ignored if no `KERNELSRC_DIR` was specified or if `KERNELSRC_PREBUILT`=true.
@@ -541,7 +541,7 @@ qemu-system-arm -m 2048M -M vexpress-a15 -cpu cortex-a15 -kernel kernel7.img -no
 * [Debian Raspberry Pi 2 Wiki](https://wiki.debian.org/RaspberryPi2)
 * [Debian CrossToolchains Wiki](https://wiki.debian.org/CrossToolchains)
 * [Official Raspberry Pi Firmware on github](https://github.com/raspberrypi/firmware)
-* [Official Raspberry Pi Kernel on github](https://github.com/raspberrypi/linux)
+* [Official Raspberry Pi Kernel with unofficial grsec on github](https://github.com/HacKurx/linux-rpi_unofficial_grsec)
 * [U-BOOT git repository](https://git.denx.de/?p=u-boot.git;a=summary)
 * [Xorg DDX driver fbturbo](https://github.com/ssvb/xf86-video-fbturbo)
 * [RPi3 Wireless interface firmware](https://github.com/RPi-Distro/firmware-nonfree/tree/master/brcm80211/brcm)

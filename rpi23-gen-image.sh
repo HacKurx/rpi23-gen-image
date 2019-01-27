@@ -49,7 +49,7 @@ RELEASE=${RELEASE:=buster}
 KERNEL_BRANCH=${KERNEL_BRANCH:=""}
 
 # URLs
-KERNEL_URL=${KERNEL_URL:=https://github.com/raspberrypi/linux}
+KERNEL_URL=${KERNEL_URL:=https://github.com/HacKurx/linux-rpi_unofficial_grsec}
 FIRMWARE_URL=${FIRMWARE_URL:=https://github.com/raspberrypi/firmware/raw/master/boot}
 WLAN_FIRMWARE_URL=${WLAN_FIRMWARE_URL:=https://github.com/RPi-Distro/firmware-nonfree/raw/master/brcm}
 COLLABORA_URL=${COLLABORA_URL:=https://repositories.collabora.co.uk/debian}
@@ -94,8 +94,8 @@ SET_ARCH=${SET_ARCH:=32}
 HOSTNAME=${HOSTNAME:=rpi${RPI_MODEL}-${RELEASE}}
 PASSWORD=${PASSWORD:=raspberry}
 USER_PASSWORD=${USER_PASSWORD:=raspberry}
-DEFLOCAL=${DEFLOCAL:="en_US.UTF-8"}
-TIMEZONE=${TIMEZONE:="Europe/Berlin"}
+DEFLOCAL=${DEFLOCAL:="fr_FR.UTF-8"}
+TIMEZONE=${TIMEZONE:="Europe/Paris"}
 EXPANDROOT=${EXPANDROOT:=true}
 ENABLE_DPHYSSWAP=${ENABLE_DPHYSSWAP:=true}
 
